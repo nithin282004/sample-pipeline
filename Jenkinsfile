@@ -14,7 +14,7 @@ pipeline{
                 script{
                     bat 'docker rm -f sample-pipeline || true'
                     // bat 'docker rmi sample-image || true'
-                    bat 'docker run -d -p 50:50 --name sample-pipeline sample-image'
+                    bat 'docker run -d -p 8081:80 --name sample-pipeline sample-image'
                 }
             }
         }
