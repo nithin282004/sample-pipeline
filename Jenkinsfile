@@ -13,7 +13,7 @@ pipeline{
             steps{
                 script{
                     bat 'docker rm -f sample-pipeline || true'
-                    bat 'docker rmi sample-image || true'
+                    // bat 'docker rmi sample-image || true'
                     bat 'docker run -d -p 20:20 --name sample-pipeline sample-image'
                 }
             }
